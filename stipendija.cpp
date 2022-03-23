@@ -70,17 +70,17 @@ float grupa1::mesecni_primanja(){//
 	cout<<"Vnesi dopolnitelni prihodi:";cin>>prihodi;
 	vkupno=(plata_majka+plata_tatko+plata_drug_clen)/n+(prihodi/12*n);//presmetka na mesecnite primanja
 	if(vkupno<10000)
-	bod_mp=60;
+		bod_mp=60;
 	if(vkupno>10000 and vkupno<=20000)
-	bod_mp=50;
+		bod_mp=50;
 	if(vkupno>20000 and vkupno<=30000)
-	bod_mp=40;
+		bod_mp=40;
 	if(vkupno>30000 and vkupno<=40000)
-	bod_mp=30;
+		bod_mp=30;
 	if(vkupno>40000 and vkupno<=50000)
-	bod_mp=20;
+		bod_mp=20;
 	if(vkupno>50000)
-	bod_mp=0;
+		bod_mp=0;
 	return bod_mp;
 }
 class grupa2:public Student{//izvedena klasa
@@ -159,36 +159,36 @@ int main()
 		cout<<"Vnesi broj na polozeni ispiti:";cin>>br;}
 		cout<<"Vo koja kategorija apliciral "<<j+1<<"-ot student(1 ili 2 ili 3):";
 		cin>>k; 
-		if(k==1){
-		if(d!="makedonsko"){//proverka na drzavjanstvo
-			cout<<"Ne moze da bide dodelena stipendija na student koj nema makedonsko drzavjanstvo!"<<endl;
-	}
-	else{
-		s=&g1;//pokazuvac pokazuva na adresa na objekt od izvedena klasa
-		s->set(i,p,faks,d,uspeh,br,ind);
-		s->pecati();		
-	}}
-	if(k==2){
-		if(d!="makedonsko"){
-			cout<<"Ne moze da bide dodelena stipendija na student koj nema makedonsko drzavjanstvo!"<<endl;
-	}
-	else{
-		s=&g2;
-		s->set(i,p,faks,d,uspeh,br,ind);
-		s->pecati();
-	}
-	}
-	if(k==3){
-		if(d!="makedonsko"){
-			cout<<"Ne moze da bide dodelena stipendija na student koj nema makedonsko drzavjanstvo!"<<endl;
-	}
-	else{
-		s=&g3;
-		s->set(i,p,faks,d,uspeh,br,ind);
-		s->pecati();
-	}
-	}}
-	return 0;}
+			if(k==1){
+				if(d!="makedonsko"){//proverka na drzavjanstvo
+				cout<<"Ne moze da bide dodelena stipendija na student koj nema makedonsko drzavjanstvo!"<<endl;
+			}
+			else{
+				s=&g1;//pokazuvac pokazuva na adresa na objekt od izvedena klasa
+				s->set(i,p,faks,d,uspeh,br,ind);
+				s->pecati();		
+			}}
+			if(k==2){
+				if(d!="makedonsko"){
+					cout<<"Ne moze da bide dodelena stipendija na student koj nema makedonsko drzavjanstvo!"<<endl;
+			}
+			else{
+				s=&g2;
+				s->set(i,p,faks,d,uspeh,br,ind);
+				s->pecati();
+			}
+			}
+			if(k==3){
+				if(d!="makedonsko"){
+					cout<<"Ne moze da bide dodelena stipendija na student koj nema makedonsko drzavjanstvo!"<<endl;
+			}
+			else{
+				s=&g3;
+				s->set(i,p,faks,d,uspeh,br,ind);
+				s->pecati();
+			}
+			}}
+			return 0;}
 	
 
 
